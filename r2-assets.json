@@ -1,0 +1,76 @@
+{
+  "bucket": "arqdeck-downloads",
+  "publicBaseUrl": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev",
+  "assets": {
+    "assets/images/alternate.webp": {
+      "key": "website/assets/images/alternate.35c0a849e7c03d3e.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/alternate.35c0a849e7c03d3e.webp",
+      "sha256": "35c0a849e7c03d3ec738ca31365536f25d29b22f03c368e4a91b058f1c039a9b",
+      "bytes": 21404,
+      "contentType": "image/webp"
+    },
+    "assets/images/button.webp": {
+      "key": "website/assets/images/button.2165d1103ace16cd.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/button.2165d1103ace16cd.webp",
+      "sha256": "2165d1103ace16cd5cb5cc6a6775564ea2ebd54dba06b4f0cd56a7579c58e54d",
+      "bytes": 7566,
+      "contentType": "image/webp"
+    },
+    "assets/images/frame.webp": {
+      "key": "website/assets/images/frame.892a9f8fd9fc7bdc.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/frame.892a9f8fd9fc7bdc.webp",
+      "sha256": "892a9f8fd9fc7bdc9e7398b38123ab2f0fed2a3ef7bc6ae60bf5cab6b6017c9f",
+      "bytes": 13924,
+      "contentType": "image/webp"
+    },
+    "assets/images/full.webp": {
+      "key": "website/assets/images/full.bccc576aba325ac6.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/full.bccc576aba325ac6.webp",
+      "sha256": "bccc576aba325ac67a6703aea0ab2a7725c8c72085857f0e24f293bcc0cef782",
+      "bytes": 23958,
+      "contentType": "image/webp"
+    },
+    "assets/images/hero-mobile.webp": {
+      "key": "website/assets/images/hero-mobile.dee8db057fd22e36.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/hero-mobile.dee8db057fd22e36.webp",
+      "sha256": "dee8db057fd22e36b4493131c486171a6e302c0a2b9ac3301fb563ecc0d265bc",
+      "bytes": 44560,
+      "contentType": "image/webp"
+    },
+    "assets/images/hero.webp": {
+      "key": "website/assets/images/hero.a4c7d8fb4a098e61.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/hero.a4c7d8fb4a098e61.webp",
+      "sha256": "a4c7d8fb4a098e612a317b0bfac7f2ecdd731da85403c071faf5faf7d66426c1",
+      "bytes": 221340,
+      "contentType": "image/webp"
+    },
+    "assets/images/joystick.webp": {
+      "key": "website/assets/images/joystick.ea6232c0c6745297.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/joystick.ea6232c0c6745297.webp",
+      "sha256": "ea6232c0c6745297623209d5100a2426f7f967d04ad9b0fb5f744ee0569fdf70",
+      "bytes": 23834,
+      "contentType": "image/webp"
+    },
+    "assets/images/logo.webp": {
+      "key": "website/assets/images/logo.a4481c75dadbdfca.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/logo.a4481c75dadbdfca.webp",
+      "sha256": "a4481c75dadbdfca234a6c475d1c974a7b83dd0a0770b74ed3b5755b7b847617",
+      "bytes": 2434,
+      "contentType": "image/webp"
+    },
+    "assets/images/small.webp": {
+      "key": "website/assets/images/small.1f8362b7813a9494.webp",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/assets/images/small.1f8362b7813a9494.webp",
+      "sha256": "1f8362b7813a94943fa11bb43ebaf3bba5c16d689efaab29cfc67c74c4fd8cfd",
+      "bytes": 23936,
+      "contentType": "image/webp"
+    },
+    "share.jpg": {
+      "key": "website/share.f5217ef087cb69c3.jpg",
+      "url": "https://pub-8d87887e09e24b44a7288b2d8c314575.r2.dev/website/share.f5217ef087cb69c3.jpg",
+      "sha256": "f5217ef087cb69c39216ee9ead47698391d232da6219189cef967c2bb89e9b85",
+      "bytes": 67245,
+      "contentType": "image/jpeg"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang='LV'>
+ <!--[if !IE]> PAGE-BEGIN: CAT_HOME <![endif]-->
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+   <title>
+    JAL SMU E-katalogs
+   </title>
+   <!--[if !IE]> ELEMENT-BEGIN: CAT_HEAD <![endif]--><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/2025_JAL/css/catalogue-public.css?v=04">
+<script src="/2025_JAL/js/catalogue-public.js?v=04" defer></script>
+<script src="/2025_JAL/js/catalogue-home.js?v=04" defer></script><!--[if !IE]> ELEMENT-END: CAT_HEAD <![endif]-->
+
+  </head>
+  <body class="catalogue-shop">
+   <!--[if !IE]> ELEMENT-BEGIN: CAT_HEADER <![endif]--><div class="scroll-progress" id="jalScrollProgress" aria-hidden="true"></div>
+
+<header class="site-header" id="jalSiteHeader">
+  <div class="site-header__bar">
+    <a href="https://home.jalatvia.lv/" class="jal-brand" aria-label="JA Latvia sākumlapa">
+      <img src="/2025_JAL/images/catalogue/ja-latvia-logo-white.png" alt="JA Latvia">
+    </a>
+    <div class="hdr-tools">
+      <div class="hsearch" id="hSearch">
+        <label class="hsearch__field" tabindex="0" aria-label="Atvērt meklēšanu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="hSearchInput" placeholder="Meklē produktus, SMU, nozares…" autocomplete="off" aria-label="Meklēt katalogā">
+        </label>
+        <div class="hsearch__drop" id="hSearchDrop" hidden></div>
+      </div>
+      <a class="wish-link" id="wishLink" href="/katalogs/favoriti" aria-label="Mani favorīti">
+        <svg viewBox="0 0 24 24"><path d="M12 20.6s-7.6-4.6-10-9.2C.5 8.4 2 5 5.4 4.4c2-.35 3.9.5 5 2.2 1.1-1.7 3-2.55 5-2.2C18.9 5 20.4 8.4 19 11.4c-2.4 4.6-10 9.2-10 9.2z"/></svg>
+        <span class="wish-link__count" id="wishCount" hidden>0</span>
+      </a>
+      <button class="cart-btn" id="cartBtn" aria-label="Atvērt grozu" aria-controls="cartDrawer" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+      <span class="cart-btn__label">Grozs</span> <span class="cart-count" id="cartCount">0</span>
+    </button>
+    </div>
+  </div>
+</header>
+
+<button class="fab-menu" id="jalFabMenu" aria-label="Atvērt izvēlni" aria-expanded="false" aria-controls="jalMobileMenu">
+  <svg class="fab-menu__rotor" viewBox="0 0 112 112" aria-hidden="true">
+    <defs><path id="jalFabPath" d="M 56,56 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" fill="none"/></defs>
+    <text font-family="'Inter Tight', Arial, sans-serif" font-weight="600" font-size="9" letter-spacing="0" fill="currentColor">
+      <textPath href="#jalFabPath" textLength="276" lengthAdjust="spacing">Junior Achievement Latvia · izvēlne ·</textPath>
+    </text>
+  </svg>
+  <span class="fab-menu__circle"><span class="fab-menu__icon"><span></span><span></span><span></span></span></span>
+</button>
+
+<div class="mobile-menu" id="jalMobileMenu" role="dialog" aria-modal="true" aria-label="Galvenā izvēlne" aria-hidden="true" inert>
+  <div class="mobile-menu__inner">
+    <button class="mobile-menu__close" id="jalMobileClose" aria-label="Aizvērt izvēlni">✕</button>
+    <a href="https://home.jalatvia.lv/" class="mobile-menu__brand">JA Latvia</a>
+    <div class="mm-cols">
+      <div class="mm-col">
+        <a href="https://home.jalatvia.lv/aktualitates/">Aktualitātes</a>
+        <a href="https://home.jalatvia.lv/galerija/">Galerija</a>
+        <a href="https://home.jalatvia.lv/partneri/">Partneri</a>
+      </div>
+      <div class="mm-col">
+        <h4>Programmas</h4>
+        <p class="mm-group">Uzņēmējdarbība</p>
+        <a href="https://home.jalatvia.lv/programmas-smu/">Skolēnu mācību uzņēmumi</a>
+        <a href="https://home.jalatvia.lv/programmas/techtrack/">TechTrack</a>
+        <p class="mm-group">Finanšu pratība</p>
+        <a href="https://home.jalatvia.lv/programmas/finansu-pratibas-abc/">Finanšu pratības ABC</a>
+        <p class="mm-group">Karjera</p>
+        <a href="https://enudiena.lv/">Ēnu diena</a>
+        <a href="https://home.jalatvia.lv/programmas/lideru-programma/">Līderu programma</a>
+      </div>
+      <div class="mm-col">
+        <h4>Pasākumi un konkursi</h4>
+        <a href="https://home.jalatvia.lv/programmas/cits-bazars/">Cits Bazārs</a>
+        <a href="https://home.jalatvia.lv/uu-2027/">Konference „Uzdrīksties uzvarēt”</a>
+        <a href="https://home.jalatvia.lv/jauno-uznemeju-skola/">Jauno uzņēmēju skola</a>
+        <a href="https://home.jalatvia.lv/iscf/">Starptautiskais SMU festivāls (ISCF)</a>
+      </div>
+      <div class="mm-col">
+        <h4>Par JA Latvia</h4>
+        <a href="https://home.jalatvia.lv/par-ja-latvia/">Par mums</a>
+        <a href="https://home.jalatvia.lv/dalibskolas/">Dalībskolas</a>
+        <a href="https://home.jalatvia.lv/par-ja-latvia-kontakti/">Kontaktinformācija un rekvizīti</a>
+        <a class="mm-col__highlight" href="/katalogs"><b>SMU e-katalogs</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--[if !IE]> ELEMENT-END: CAT_HEADER <![endif]-->
+   <div id="webapp"><link rel='stylesheet' href='/2025_JAL/css/catalogue-shop.css?v=09'><script defer src='/2025_JAL/js/catalogue-shop.js?v=06'></script><main id='catalogueShop'><div class='shop-back shell'><a href='/katalogs'>← Katalogs</a></div><p class='shop-preview shell'>Priekšskatījums — šis katalogs vēl nav publicēts.</p><section class='smu-hero' aria-labelledby='smu-title'><div class='smu-hero__media' aria-hidden='true'><img src='/WebShowJALFile.hal?smf=V22910002026&amp;id=746D864A-57A31399-9CC35145-58F5B958-96A9A0AB&amp;v=208452' alt=''></div><div class='smu-hero__shade'></div><div class='shell smu-hero__content'><div class='smu-hero__top'><div class='logo-plate'><img src='/WebShowJALFile.hal?smf=V22910002026&amp;id=55834238-3BFF5A9D-3FBB31E0-61E84076-91D88FD1&amp;v=208482' alt='ArqDeck logo'></div><p class='shop-eyebrow'>Skolēnu mācību uzņēmums</p></div><h1 id='smu-title' class='brand-name'>ArqDeck</h1><p class='smu-hero__summary'>ArqDeck ir modulāra vadības ierīce ar maināmiem pogu, džojstika un slēdžu moduļiem. Tā ļauj vienu ierīci pielāgot dažādiem uzdevumiem un samazina ierīču skaitu uz galda. Atšķirībā no konkurentiem, moduļus var ātri nomain…</p><div class='brand-sub'><span>Rīgas 25. vidusskola</span><span>Rīga</span><span>IT risinājumi un tehnoloģiju produkti</span></div></div></section><nav class='shop-nav' aria-label='Veikala sadaļas'><div class='shell shop-nav__row'><a href='#produkti' aria-current='location'>Produkti <span class='shop-nav__count'>2</span></a><a href='#par-mums'>Par mums</a><a href='#piegade'>Piegāde</a></div></nav><section id='produkti'><div class='shell'><div class='shop-section-head'><div><p class='shop-eyebrow'>SMU piedāvājums</p><h2>Mūsu produkti</h2></div><span>2 produkti</span></div><div class='shop-product-grid'><article class='prod-card' data-shop-product='84e3f1c1-35da4cc8-9d849e4b-d1bf6cd1-00000000'><a class='catalogue-card-link' href='/katalogs/arqdeck/84e3f1c1-35da4cc8-9d849e4b-d1bf6cd1-00000000'><div class='prod-card__plate'><img src='/WebShowSMUShopItemImage.hal?smf=V22910002026&amp;id=84e3f1c1-35da4cc8-9d849e4b-d1bf6cd1-00000000&amp;name=thumb_f061b7fe-6dda-4b7a-aed5-94ffb66b050f.jpg' alt='Full Deck' loading='lazy'><span class='badge new'>Jauns</span></div><div class='prod-card__body'><h3 class='prod-card__name'>Full Deck</h3><p class='shop-product-desc'>Komplektācija: full deck, 1 džoistiks (joystick), 9 lielās pogas.</p><div class='prod-card__price'><span>€49.99</span></div></div></a><form class='shop-product-options'><label>Krāsa<select name='color' required><option value=''>Izvēlies krāsu</option><option value='#000000'>Melns</option><option value='#ffffff'>Balts</option></select></label><p class='shop-product-status' role='status'></p></form></article><article class='prod-card' data-shop-product='c2984b61-ae6e447d-a44b7241-652bcdca-00000000'><a class='catalogue-card-link' href='/katalogs/arqdeck/c2984b61-ae6e447d-a44b7241-652bcdca-00000000'><div class='prod-card__plate'><img src='/WebShowSMUShopItemImage.hal?smf=V22910002026&amp;id=c2984b61-ae6e447d-a44b7241-652bcdca-00000000&amp;name=thumb_2f3c624c-fafc-471c-9932-cddbf392d670.jpg' alt='Small Deck' loading='lazy'><span class='badge new'>Jauns</span></div><div class='prod-card__body'><h3 class='prod-card__name'>Small Deck</h3><p class='shop-product-desc'>Komplektācija: small deck, 6 pogas</p><div class='prod-card__price'><span>€29.99</span></div></div></a><form class='shop-product-options'><label>Krāsa<select name='color' required><option value=''>Izvēlies krāsu</option><option value='#000000'>Melns</option><option value='#ffffff'>Balts</option></select></label><p class='shop-product-status' role='status'></p></form></article></div></div></section><section id='par-mums'><div class='shell shop-about-grid'><div><div class='shop-section-head'><div><p class='shop-eyebrow'>Iepazīsti SMU</p><h2>Par mums</h2></div></div><div class='shop-about-text'>ArqDeck ir modulāra vadības ierīce ar maināmiem pogu, džojstika un slēdžu moduļiem. Tā ļauj vienu ierīci pielāgot dažādiem uzdevumiem un samazina ierīču skaitu uz galda. Atšķirībā no konkurentiem, moduļus var ātri nomainīt un ierīci pilnībā pielāgot savām vajadzībām.</div></div><div class='shop-about-side'><dl class='shop-facts'><div><dt>Skola</dt><dd><span>Rīgas 25. vidusskola</span></dd></div><div><dt>Novads</dt><dd>Rīga</dd></div><div><dt>Nozare</dt><dd>IT risinājumi un tehnoloģiju produkti</dd></div></dl><h3>Sazinies ar mums</h3><div class='shop-contacts'><a class='shop-contact-email' href='mailto:arqdeck.smu@gmail.com'>arqdeck.smu@gmail.com</a><div class='shop-contact-links'><a href='https://facebook.com/dsafadsf' target='_blank' rel='noopener noreferrer' aria-label='Facebook'><img src='/2025_JAL/images/catalogue/social/facebook.svg' alt='' width='24' height='24'></a><a href='https://instagram.com/arqdeck_smu' target='_blank' rel='noopener noreferrer' aria-label='Instagram'><img src='/2025_JAL/images/catalogue/social/instagram.svg' alt='' width='24' height='24'></a><a href='https://tiktok.com/@arqdeck_smu' target='_blank' rel='noopener noreferrer' aria-label='TikTok'><img src='/2025_JAL/images/catalogue/social/tiktok.svg' alt='' width='24' height='24'></a></div></div><h3>Mūsu komanda</h3><div class='shop-team'><div class='shop-team-member'><img src='/WebShowSMUEmployeeImage.hal?smf=V22910002026&amp;id=31F7AB18-93590FBC-EDE92DA3-3E0D2D07-5B05CE3B&amp;v=208476' alt='Artūrs Eglājs' loading='lazy'><strong>Artūrs Eglājs</strong><span>IT vadītājs</span></div><div class='shop-team-member'><img src='/WebShowSMUEmployeeImage.hal?smf=V22910002026&amp;id=4B5F8BB3-110A75ED-EDD46CD6-96EE4157-2A1E783E&amp;v=207613' alt='Roberts Kalniņš ' loading='lazy'><strong>Roberts Kalniņš </strong><span>Ražošanas vadītājs</span></div><div class='shop-team-member'><img src='/WebShowSMUEmployeeImage.hal?smf=V22910002026&amp;id=BD2B6CC0-96E20972-08783BB3-8FAB1E65-C8B2C7EA&amp;v=207614' alt='Viktorija Gailīte' loading='lazy'><strong>Viktorija Gailīte</strong><span>Grāmatvedis/finanšu vadītājs</span></div><div class='shop-team-member'><img src='/WebShowSMUEmployeeImage.hal?smf=V22910002026&amp;id=9AF78FE1-E5875071-2C0B63A0-131723C4-50311F69&amp;v=207615' alt='Toms Vulāns' loading='lazy'><strong>Toms Vulāns</strong><span>Direktors/vadītājs</span></div><div class='shop-team-member'><img src='/WebShowSMUEmployeeImage.hal?smf=V22910002026&amp;id=6FEC107A-E402A2A4-79414687-91F1E139-D3F6D168&amp;v=208477' alt='Emīlija Saleniece' loading='lazy'><strong>Emīlija Saleniece</strong><span>Mārketinga un sabiedrisko attiecību vadītājs</span></div></div></div></div></section><section id='piegade'><div class='shell'><div class='shop-section-head'><div><p class='shop-eyebrow'>Kā saņemt pasūtījumu</p><h2>Piegāde</h2></div></div><div class='shop-delivery'>Izgatavošanas laiks: Pasūtījuma izgatavošanu uzsākam uzreiz pēc apmaksas saņemšanas. Ražošanas laiks ir aptuveni 2–4 nedēļas.<br>Piegādes veidi: Preci nosūtām ar Omniva vai DPD pakomātiem – klients var izvēlēties sev tuvāko un ērtāko pakomātu.<br>Piegādes izmaksas: Piegādes izmaksas sedz klients saskaņā ar izvēlētā pakomāta pakalpojuma sniedzēja cenrādi.<br></div></div></section></main>
+   </div>
+   <!--[if !IE]> ELEMENT-BEGIN: CAT_FOOTER <![endif]--><footer class="sfooter" aria-label="JA Latvia kājene">
+  <div class="sfooter__inner">
+    <div class="sfooter__grid">
+      <div>
+        <img src="/2025_JAL/images/catalogue/ja-latvia-logo-white.png" alt="JA Latvia" class="sfooter__logo">
+        <h4 class="sfooter__nh">Esi informēts</h4>
+        <p class="sfooter__ntext">Pieraksties JA Latvia e-avīzei - reizi mēnesī saņem jaunumus, pasākumus un iespējas.</p>
+        <a class="sfooter__newsletter" href="https://home.jalatvia.lv/#nlForm">Pierakstīties e-avīzei <span aria-hidden="true">→</span></a>
+      </div>
+
+      <nav class="sfooter__col" aria-label="Ātrās saites">
+        <h4>Ātrās saites</h4>
+        <ul>
+          <li><a href="https://home.jalatvia.lv/aktualitates/">Aktualitātes</a></li>
+          <li><a href="https://home.jalatvia.lv/galerija/">Galerija</a></li>
+          <li><a href="https://home.jalatvia.lv/partneri/">Partneri</a></li>
+          <li><a href="https://home.jalatvia.lv/par-ja-latvia/">Par JA Latvia</a></li>
+          <li><a href="https://home.jalatvia.lv/skolam/">Kļūt par dalībskolu</a></li>
+        </ul>
+      </nav>
+
+      <div class="sfooter__col">
+        <h4>Kontakti</h4>
+        <ul class="sfooter__clist">
+          <li>Miera iela 2, Rīga, LV-1001</li>
+          <li>no pirmdienas līdz piektdienai 10:00–17:00</li>
+          <li><a href="tel:+37167339656">67339656</a></li>
+          <li><a href="mailto:jal@jalatvia.lv">jal@jalatvia.lv</a></li>
+        </ul>
+      </div>
+
+      <div class="sfooter__col">
+        <h4>Seko mums</h4>
+        <div class="sfooter__social">
+          <a href="https://www.instagram.com/jalatvia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/company/junior-achievement-latvia/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v13H.2V8zm7.5 0h4.41v1.78h.06c.62-1.12 2.13-2.3 4.39-2.3 4.7 0 5.56 3.09 5.56 7.11V21h-4.6v-6.19c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V21H7.7V8z"/></svg></a>
+          <a href="https://www.facebook.com/JALatvia/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sfooter__reqs">
+      <span class="sfooter__reqs-h">Rekvizīti:</span> Biedrība „Junior Achievement Latvia” · Reģ. Nr. 50008014301 · Jurid. adrese: Miera iela 2, Rīga, LV-1001 · IBAN LV43HABA0551034239176 · Swedbank
+    </div>
+
+    <div class="sfooter__bar">
+      <span>© <span id="jalYear"></span> Junior Achievement Latvia · A Member of JA Worldwide</span>
+      <span class="sfooter__legal">
+        <a href="https://jalatvia.lv/dokumenti/?file=JALatvia_Privatuma_politika_2019.pdf" target="_blank" rel="noopener">Privātums</a>
+        <a href="https://home.jalatvia.lv/">Noteikumi</a>
+        <a href="https://home.jalatvia.lv/">Sīkdatnes</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Grozs" aria-hidden="true" inert>
+  <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__head"><span>Grozs</span><button id="cartCloseBtn" aria-label="Aizvērt grozu">✕</button></div>
+    <div class="cart-drawer__items" id="cartItems"></div>
+    <div class="cart-drawer__foot"><span>Kopā</span><b id="cartTotal">€0.00</b></div>
+    <button class="checkout-btn" id="checkoutBtn">Veikt pasūtījumu</button>
+    <p class="cart-drawer__note">Apmaksa šeit netiek veikta. Pēc pasūtījuma nosūtīšanas SMU sazināsies ar tevi, lai vienotos par apmaksu un piegādi.</p>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><!--[if !IE]> ELEMENT-END: CAT_FOOTER <![endif]-->
+  </body>
+ <!--[if !IE]> PAGE-END: CAT_HOME <![endif]-->
+</html>

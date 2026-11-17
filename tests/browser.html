@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>ArqDeck browser interaction checks</title><style>body{font:18px monospace;background:#1c1c1c;color:#eee;padding:32px}iframe{width:390px;height:844px;border:1px solid #888}#results{white-space:pre-wrap}</style><h1>ArqDeck interaction checks</h1><pre id="results">Running…</pre><iframe src="../index.html" title="ArqDeck mobile test"></iframe><script type="module">
+const frame=document.querySelector('iframe');const loaded=new Promise(r=>frame.addEventListener('load',r));if(location.search.includes('build'))frame.src='../dist/index.html';await loaded;await new Promise(r=>setTimeout(r,2000));const d=frame.contentDocument,w=frame.contentWindow,results=[];const assert=(ok,msg)=>{results.push((ok?'PASS ':'FAIL ')+msg);document.querySelector('#results').textContent=results.join('\n');if(!ok)throw Error(msg)};const wait=()=>new Promise(r=>setTimeout(r,300));const initial=w.location.href;
+for(const b of d.querySelectorAll('[data-purchase]')){b.focus();b.click();await wait();assert(d.getElementById(b.getAttribute('aria-describedby')).textContent==='Iegādes iespēja drīzumā būs pieejama.',b.dataset.purchase+' purchase announces availability');assert(w.location.href===initial,'Purchase stays on page');assert(d.activeElement===b,'Purchase preserves keyboard focus');}
+assert(d.querySelectorAll('form').length===0,'No ordering, checkout or registration forms');const dl=d.querySelector('#software-upcoming');assert(!dl.hidden,'Software control publicly visible');dl.click();await wait();assert(d.querySelector('#software-status').textContent==='Programmatūra drīzumā būs pieejama lejupielādei.','Software control announces availability');assert(d.querySelector('#software-download').hidden,'No nonexistent download exposed');assert(w.location.href===initial,'Software placeholder does not navigate');
+const nav=d.querySelector('.nav__links a[href="#programma"]');assert(!!nav&&!!d.querySelector(nav.hash),'Software navigation targets real section');
+const menu=d.querySelector('.nav__toggle');menu.click();await wait();assert(menu.getAttribute('aria-expanded')==='true','Mobile menu opens');assert(menu.getAttribute('aria-label')==='Aizvērt izvēlni','Latvian menu state');d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));await wait();assert(menu.getAttribute('aria-expanded')==='false','Escape closes menu');menu.click();await wait();d.querySelector('.nav__links a[href="#programma"]').click();await wait();assert(menu.getAttribute('aria-expanded')==='false','Navigation closes mobile menu');assert(w.location.hash==='#programma','Software anchor navigation works');
+assert(d.querySelector('a[href="mailto:arqdeck.smu@gmail.com"]')&&d.querySelector('a[href="https://instagram.com/arqdeck_smu"]')&&d.querySelector('a[href="https://tiktok.com/@arqdeck_smu"]'),'All three supplied contact destinations');assert(!d.querySelector('a[href*="facebook"]'),'Unverified Facebook excluded');assert([...d.images].every(i=>i.complete&&i.naturalWidth>0),'All product and logo images load');assert(d.documentElement.scrollWidth<=390,'Mobile viewport has no horizontal overflow');const language=d.querySelector('#language-switch');
+assert(d.documentElement.lang==='lv'&&language.getAttribute('aria-pressed')==='false','Default language is Latvian');
+assert(language.tagName==='BUTTON'&&language.type==='button','Language switch is a native keyboard-accessible button');
+language.focus();language.click();await wait();
+assert(d.documentElement.lang==='en'&&language.getAttribute('aria-pressed')==='true','Switch changes document language to English');
+assert(d.activeElement===language,'Language switch preserves focus');
+assert(d.querySelector('.hero h1').textContent.includes('A modular controller'),'English hero is translated');
+assert(d.title==='ArqDeck | Modular desktop controllers','English page title');
+assert(d.querySelector('meta[property="og:locale"]').content==='en_GB','English social locale');
+assert(d.querySelector('[data-purchase="full"]').getAttribute('aria-label')==='Buy Full Deck','English accessible purchase label');
+assert(d.querySelector('.price').textContent==='€49.99','English price formatting');
+const {translations}=await import('../translations.js');
+assert([...d.querySelectorAll('[data-i18n]')].every(e=>e.textContent===translations[e.dataset.i18n].en),'Every marked text node is English');
+for(const attribute of ['alt','aria-label','content']){
+ assert([...d.querySelectorAll(`[data-i18n-${attribute}]`)].filter(e=>!e.matches('.nav__toggle')).every(e=>e.getAttribute(attribute)===translations[e.getAttribute(`data-i18n-${attribute}`)].en),`English ${attribute} translations complete`);
+}
+assert(d.querySelector('#full-status').textContent==='Purchasing will be available soon.','Existing purchase message updates to English');
+const englishBuy=d.querySelector('[data-purchase="small"]');englishBuy.click();await wait();
+assert(d.querySelector('#small-status').textContent==='Purchasing will be available soon.','New English purchase announcement');
+dl.click();await wait();assert(d.querySelector('#software-status').textContent==='The software will be available to download soon.','English software availability message');
+menu.click();await wait();assert(menu.getAttribute('aria-label')==='Close menu','English open-menu label');
+d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));await wait();assert(menu.getAttribute('aria-label')==='Open menu','English closed-menu label');
+assert(d.documentElement.scrollWidth<=390,'English layout has no horizontal overflow');
+frame.style.width='320px';await wait();assert(d.documentElement.scrollWidth<=320,'English layout fits 320px');assert(language.getBoundingClientRect().right<=320,'Language switch stays visible at 320px');frame.style.width='390px';await wait();
+language.click();await wait();assert(d.documentElement.lang==='lv','Switch returns to Latvian');
+assert(d.querySelector('#full-status').textContent==='Iegādes iespēja drīzumā būs pieejama.','Existing status returns to Latvian');
+assert([...d.querySelectorAll('[data-i18n]')].every(e=>e.textContent===translations[e.dataset.i18n].lv),'Every marked text node returns to Latvian');
+assert(d.querySelector('#delivery-h').getAttribute('aria-label')==='Ražošana un piegāde.','Animated heading accessible name follows language');
+assert(!Object.values(translations).some(pair=>Object.values(pair).some(text=>text.includes(String.fromCharCode(0x2014)))),'Neither language uses em dashes');
+language.click();await wait();await new Promise(resolve=>{frame.addEventListener('load',resolve,{once:true});w.location.reload();});await new Promise(r=>setTimeout(r,1500));
+assert(frame.contentDocument.documentElement.lang==='lv','Reload defaults to Latvian after English selection');
+
+await new Promise(resolve=>{frame.addEventListener('load',resolve,{once:true});frame.src='../dist/index.html?lang=en';});await new Promise(r=>setTimeout(r,1500));assert(frame.contentDocument.documentElement.lang==='en','Explicit English URL loads English');assert(frame.contentDocument.title==='ArqDeck | Modular desktop controllers','English URL translates metadata');
+document.querySelector('#results').textContent+='\nALL CHECKS PASSED';
+</script></html>

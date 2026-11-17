@@ -1,0 +1,22 @@
+{
+  "name": "arqdeck-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist",
+    "build:client": "node scripts/build-client.mjs",
+    "prestart": "npm run build:client",
+    "assets:upload": "node scripts/upload-assets.mjs",
+    "test:file": "node tests/file-browser.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

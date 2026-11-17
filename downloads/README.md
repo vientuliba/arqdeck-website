@@ -1,0 +1,1 @@
+Add the authentic public ArqDeck installer here. In app.js set softwareRelease.url to /downloads/your-file and optionally filename and accurate information. No accounts, payments or ownership checks are involved. No installer was supplied with this project.
