@@ -26,6 +26,7 @@ if (localAssets) {
 }
 await writeFile('dist/index.html', html);
 for (const file of ['style.css', 'site.js']) await cp(file, `dist/${file}`);
+for (const file of ['404.html', '_headers']) await cp(`public/${file}`, `dist/${file}`);
 
 const runtimeFiles = [
   'system.css', 'system.js', 'layout/layout.css', 'layout/layout.js',

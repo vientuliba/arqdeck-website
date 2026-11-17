@@ -32,7 +32,11 @@ npm run build
 
 Use the **cf CLI** for Cloudflare operations. Credentials stay in the CLI's account configuration, outside this repository. Uploads use content-hashed object keys under `website/`, verify public responses byte for byte, and leave unrelated bucket objects untouched. The bucket currently uses its already-enabled `r2.dev` endpoint; no custom domain is configured. See [storage details](docs/storage.md).
 
-The supplied photographs, original catalog and authoritative [product reference](assets/product-reference.md) remain in `assets/`. Only the runtime files used by the page are retained from the design kit. Browser profiles, screenshots, build output, dependencies and local environment files are excluded from Git.
+The supplied photographs and authoritative [product reference](assets/product-reference.md) remain in `assets/`. Only the runtime files used by the page are retained from the design kit. Browser profiles, screenshots, build output, dependencies and local environment files are excluded from Git.
+
+## Cloudflare Pages
+
+The existing GitHub-connected project uses `npm run build` and output directory `dist`. Node 22 is selected by `.nvmrc`. Pushing main triggers a production deployment. Only the built release is published; repository source, references, tests and documentation stay outside the output. See [deployment details](docs/deployment.md).
 
 ## Content and functionality
 
@@ -59,4 +63,4 @@ See [validation](docs/validation.md), [design](docs/design.md) and [asset proven
 
 ## Publication material
 
-No installer, authentic software screenshots, usable team portraits or white-enclosure photographs were supplied. The page uses verified names and roles, genuine black-enclosure photographs and the supplied background-extracted hero. Add the final canonical domain when website hosting is selected. The site has not been deployed as part of this repository preparation.
+No installer, authentic software screenshots, usable team portraits or white-enclosure photographs were supplied. The page uses verified names and roles, genuine black-enclosure photographs and the supplied background-extracted hero. The existing Cloudflare Pages project publishes the production build at https://arqdeck-website.pages.dev. See [deployment configuration](docs/deployment.md).

@@ -1,6 +1,6 @@
 # ArqDeck — product reference
 
-Source: the supplied JA Latvia catalog export, preserved as [website.html](website.html). Relative catalog image URLs resolve against `https://jalatvia.lv`.
+Source: the supplied JA Latvia catalog export, archived locally outside this public repository. Relevant product and business facts are preserved below.
 
 ## Website brief
 
@@ -51,7 +51,7 @@ Original product descriptions:
 | Toms Vulāns | Direktors/vadītājs | Director / manager |
 | Emīlija Saleniece | Mārketinga un sabiedrisko attiecību vadītājs | Marketing and public relations lead |
 
-Team portrait source URLs remain in `website.html` under `shop-team-member`.
+The catalog portrait endpoints returned generic placeholders, so no team portraits are displayed.
 
 ## Ordering, production, and delivery
 

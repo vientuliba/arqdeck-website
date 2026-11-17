@@ -10,4 +10,12 @@ Repository preparation verified:
 
 Previous work also verified LV/EN text and attribute round trips, metadata, dynamic status messages, 320px controls, default Latvian and explicit English URLs. Desktop and mobile screenshots were reviewed, and performance checks had no failures. These historical artifacts are retained locally rather than committed.
 
-The current cleanup does not add checkout, authentication or a software installer. No installer, usable team portraits or white-enclosure photos were supplied. The bucket has an existing public r2.dev endpoint and no custom domain. The final website hosting/canonical domain has not been configured or deployed in this task.
+The current cleanup does not add checkout, authentication or a software installer. No installer, usable team portraits or white-enclosure photos were supplied. The bucket has an existing public r2.dev endpoint and no custom domain. Cloudflare Pages is configured to build the repository and publish only dist/ through its existing GitHub integration.
+
+## Publication audit
+
+The raw third-party catalog export, redundant original-photo copy and machine-specific provenance paths were removed from the current Git tree; local archival copies are retained outside the project. Original photographs needed for future editing remain, without executable file flags. No EXIF location metadata was found.
+
+Credential-pattern scanning covered the current tree and historical text blobs without finding credentials or private keys. The current tree contains no personal machine/account paths. New commits use the repository owner's GitHub noreply identity. Existing Git history was not rewritten.
+
+The verified Pages configuration runs npm run build and publishes dist/ from main, with Node 22. The release audit found nineteen curated files and no source/reference/test/config documents. Response headers and a dedicated 404 page are included so unknown source paths are not treated as homepage routes. All ten public R2 assets were rechecked against their SHA-256 hashes and MIME types.
